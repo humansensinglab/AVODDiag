@@ -51,6 +51,7 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
   links={[
     { name: "Paper", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "ri:file-pdf-2-line" },
     { name: "Code", url: "https://github.com/humansensinglab/AVODDiag", icon: "ri:github-line" },
+    { name: "Data", url: "https://github.com/humansensinglab/AVODDiag", icon: "ri:database-2-line" },
     { name: "arXiv", url: "https://github.com/RomanHauksson/academic-project-astro-template", icon: "academicons:arxiv" },
   ]}
 >
@@ -69,13 +70,30 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 ## Abstract
 
-Recent advances in large-scale image generative models enable photorealistic scene synthesis with controllable attributes. Beyond data augmentation, their potential as diagnostic tools for trained vision systems remains 
-unexplored in the aerial and remote sensing domains.
-We introduce a synthetic diagnostic framework for aerial-view vehicle detection that combines text-guided generation, attribute-controlled editing, and automated attribute verification to construct a controllable synthetic testbed. This enables fine-grained evaluation of pretrained detectors across scene types and environmental conditions that are difficult to isolate in real datasets.
-Across three detection architectures and three real aerial datasets, synthetic scene-wise performance trends closely match real-world weaknesses. Guided by these diagnostics, targeted supplementation with small real datasets from the identified weak categories yields improvements of up to 11% AP50 while requiring substantially fewer additional samples than non-targeted augmentation.
-Our results show that controlled synthetic probing can predict real-domain performance gaps and guide efficient data collection. The proposed diagnostic framework is modular and can incorporate alternative generative or vision-language models as capabilities evolve. 
+Recent advances in large-scale image generative models enable photorealistic scene synthesis with controllable attributes, yet their potential as diagnostic tools for trained vision systems remains unexplored in aerial and remote sensing. We introduce a synthetic diagnostic framework for aerial-view vehicle detection that combines text-guided generation, attribute-controlled editing, and automated attribute verification to build a controllable synthetic testbed. This enables fine-grained evaluation of pretrained detectors across scene types and environmental conditions that are hard to isolate in real datasets. Across three detection architectures and three real aerial datasets, synthetic scene-wise performance trends closely match real-world weaknesses. Guided by these diagnostics, targeted supplementation with small real datasets from the identified weak categories yields improvements of up to 11% AP50 while requiring substantially fewer samples than non-targeted augmentation. The framework is modular and can incorporate alternative generative or vision-language models as capabilities evolve.
 
 </HighlightedSection>
+
+## TL;DR
+
+"We use foundation image generators as diagnostic instruments: synthesize attribute-controlled aerial scenes, find where detectors fail, then fix them with a small, targeted dose of real data."
+
+## Contributions
+
+- A synthetic, attribute-controlled diagnostic framework for analyzing aerial-view object detectors with foundation generative models.
+- Evidence that synthetic scene-wise evaluation reliably reflects real-world weaknesses across multiple detectors (YOLOv8, Faster R-CNN, ViTDet) and datasets (DOTAv2, LINZ, UGRC).
+- A targeted data-supplementation strategy guided by these diagnostics, reaching up to 11% AP50 gain with an order of magnitude less added data.
+
+## Method
+
+
+<Picture src={Teaser} alt="aswdfasdf" />
+
+asdfasdfasdf
+
+
+
+## END (REMOVE EVERYTHING BELOW)
 
 ## Visuals
 
