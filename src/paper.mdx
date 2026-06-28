@@ -30,6 +30,7 @@ import Wide from "./components/Wide.astro";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/tabs";
 import { Comparison } from "./components/Comparison.tsx";
 
+import aerialVideo from "./assets/aerial_video.mp4"
 import teaser from "./assets/Teaser.png"
 import methodDiagram from "./assets/MethodDiagram.png"
 import modelDiagnosis from "./assets/ModelDiagnosis.png"
@@ -69,7 +70,7 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
       <Picture slot="background" src={cover} alt="" />
       <Video slot="background" src={outside} controls={false} />
   */}
-  <Video slot="background" src={outside} controls={false} />
+  <Video slot="background" src={aerialVideo} controls={false} />
   {/* <Picture slot="background" src={dogsTrue} alt="" priority /> */}
 </Header>
 
