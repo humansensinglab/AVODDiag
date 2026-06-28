@@ -168,16 +168,24 @@ Adding small, scene-specific real datasets (urban, industrial, desert) to the we
 ## Image Editing Examples
 
 <TwoColumns>
-  <Comparison client:idle slot="left">
-    Vehicles present to No vehicles
-    <Picture slot="itemOne" src={comp1_vehicle2novehicle_a} alt="Image with vehicles" />
-    <Picture slot="itemTwo" src={comp1_vehicle2novehicle_b} alt="Image with vehicles removed" />
-  </Comparison>
-  <Comparison client:idle slot="right">
-    No vehicles to Vehicles present
-    <Picture slot="itemOne" src={comp2_novehicle2vehicle_a} alt="Image with no vehicles" />
-    <Picture slot="itemTwo" src={comp2_novehicle2vehicle_b} alt="Image with added vehicles" />
-  </Comparison>
+  <Figure slot="left">
+    <Fragment slot="caption">
+      Vehicles present to No vehicles  
+    </Fragment>
+    <Comparison client:idle slot="figure">
+      <Picture slot="itemOne" src={comp1_vehicle2novehicle_a} alt="Image with vehicles" />
+      <Picture slot="itemTwo" src={comp1_vehicle2novehicle_b} alt="Image with vehicles removed" />
+    </Comparison>
+  </Figure>
+  <Figure slot="right">
+    <Fragment slot="caption">
+      No vehicles to Vehicles present
+    </Fragment>
+    <Comparison client:idle slot="figure">    
+      <Picture slot="itemOne" src={comp2_novehicle2vehicle_a} alt="Image with no vehicles" />
+      <Picture slot="itemTwo" src={comp2_novehicle2vehicle_b} alt="Image with added vehicles" />
+    </Comparison>
+  </Figure>
 </TwoColumns>
 
 <TwoColumns>
