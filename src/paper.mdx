@@ -36,7 +36,14 @@ import methodDiagram from "./assets/MethodDiagram.png"
 import modelDiagnosis from "./assets/ModelDiagnosis.png"
 import targetedSupplementation from "./assets/TargetedSupplementation.png"
 import taxonomy from "./assets/AttributeTaxonomy.png"
-
+import comp1_vehicle2novehicle_a from "./assets/Comp1a.jpg"
+import comp1_vehicle2novehicle_b from "./assets/Comp1b.jpg"
+import comp2_novehicle2vehicle_a from "./assets/Comp2a.jpg"
+import comp2_novehicle2vehicle_b from "./assets/Comp2b.jpg"
+import comp3_sunny2snowy_a from "./assets/Comp3a.jpg"
+import comp3_sunny2snowy_b from "./assets/Comp3b.jpg"
+import comp4_fall2summer_a from "./assets/Comp4a.jpg"
+import comp4_fall2summer_b from "./assets/Comp4b.jpg"
 
 {/* # TOREMOVE: */}
 import outside from "./assets/outside.mp4";
@@ -158,19 +165,32 @@ Across all nine detector–dataset combinations, urban scenes are flagged as pro
 Adding small, scene-specific real datasets (urban, industrial, desert) to the weak categories improves dataset-level AP50 in eight of nine cases, by up to 11.3%, despite the supplements being an order of magnitude smaller than the original training sets.
 
 
-## Examples
+## Image Editing Examples
 
 <TwoColumns>
   <Comparison client:idle slot="left">
-    <Picture slot="itemOne" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-    <Picture slot="itemTwo" src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
+    Vehicles present to No vehicles
+    <Picture slot="itemOne" src={comp1_vehicle2novehicle_a} alt="Image with vehicles" />
+    <Picture slot="itemTwo" src={comp1_vehicle2novehicle_b} alt="Image with vehicles removed" />
   </Comparison>
   <Comparison client:idle slot="right">
-    <Picture slot="itemOne" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-    <Picture slot="itemTwo" src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
+    No vehicles to Vehicles present
+    <Picture slot="itemOne" src={comp2_novehicle2vehicle_a} alt="Image with no vehicles" />
+    <Picture slot="itemTwo" src={comp2_novehicle2vehicle_b} alt="Image with added vehicles" />
   </Comparison>
-  {/* <YouTubeVideo slot="left" videoId="wjZofJX0v4M" /> */}
-  {/* <ModelViewer slot="right" src="/BoxVertexColors.glb" alt="A cube colored with a rainbow gradient" /> */}
+</TwoColumns>
+
+<TwoColumns>
+  Sunny to Snowy
+  <Comparison client:idle slot="left">
+    <Picture slot="itemOne" src={comp3_sunny2snowy_a} alt="Sunny winter image" />
+    <Picture slot="itemTwo" src={comp3_sunny2snowy_b} alt="Snowy winter image" />
+  </Comparison>
+  <Comparison client:idle slot="right">
+    Fall to Summer
+    <Picture slot="itemOne" src={comp4_fall2summer_a} alt="Fall image" />
+    <Picture slot="itemTwo" src={comp4_fall2summer_b} alt="Summer image" />
+  </Comparison>
 </TwoColumns>
 
 
