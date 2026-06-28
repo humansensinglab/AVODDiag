@@ -73,20 +73,20 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
   {/* <Picture slot="background" src={dogsTrue} alt="" priority /> */}
 </Header>
 
-<HighlightedSection>
 
 ## TL;DR
 "We use foundation image generators as diagnostic instruments: synthesize attribute-controlled aerial scenes, find where detectors fail, then fix them with a small, targeted dose of real data."
 
-</HighlightedSection>
 
 
+<HighlightedSection>
 ## Abstract
 
 <Picture src={teaser} alt="Overview" />
 {/* We leverage foundation generative models to synthesize diverse, attribute-controlled aerial-view image datasets, thereby enabling systematic diagnosis of the weaknesses of aerial-view vehicle detectors. */}
 Recent advances in large-scale image generative models enable photorealistic scene synthesis with controllable attributes, yet their potential as diagnostic tools for trained vision systems remains unexplored in aerial and remote sensing. We introduce a synthetic diagnostic framework for aerial-view vehicle detection that combines text-guided generation, attribute-controlled editing, and automated attribute verification to build a controllable synthetic testbed. This enables fine-grained evaluation of pretrained detectors across scene types and environmental conditions that are hard to isolate in real datasets. Across three detection architectures and three real aerial datasets, synthetic scene-wise performance trends closely match real-world weaknesses. Guided by these diagnostics, targeted supplementation with small real datasets from the identified weak categories yields improvements of up to 11% AP50 while requiring substantially fewer samples than non-targeted augmentation. The framework is modular and can incorporate alternative generative or vision-language models as capabilities evolve.
 
+</HighlightedSection>
 
 
 ## Contributions
@@ -96,10 +96,41 @@ Recent advances in large-scale image generative models enable photorealistic sce
 - A targeted data-supplementation strategy guided by these diagnostics, reaching up to 11% AP50 gain with an order of magnitude less added data.
 
 
+<HighlightedSection>
+
 ## Method
 <Picture src={methodDiagram} alt="Method Diagram" />
 
-### Taxonomy
+
+<Tabs defaultValue="true">
+  <TabsList>
+    <TabsTrigger value="taxonomy">Taxonomy</TabsTrigger>
+    <TabsTrigger value="generation">Generation</TabsTrigger>
+    <TabsTrigger value="editing">Editing</TabsTrigger>
+    <TabsTrigger value="annotations">Annotations</TabsTrigger>
+    <TabsTrigger value="diagnosis">Diagnosis</TabsTrigger>
+  </TabsList>
+  <TabsContent value="taxonomy">
+    Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
+  </TabsContent>
+  <TabsContent value="generation">
+    We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
+    A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
+  </TabsContent>
+  <TabsContent value="editing">
+    A second image-editing stage rebalances under-represented attributes via image-and-text-to-image edits.
+  </TabsContent>
+  <TabsContent value="annotations">
+    Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass.
+  </TabsContent>
+  <TabsContent value="diagnosis">
+    Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
+  </TabsContent>
+</Tabs>
+
+
+
+{/* ### Taxonomy
 Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color). 
 
 ### Image Generation
@@ -107,13 +138,14 @@ We uniformly sample attribute tuples, an LLM composes nadir-view generation prom
 A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
 
 ### Image Editing
-A second image-editing stage rebalances under-represented attributes via image-and-text-to-image edits. 
+ 
 
 ### Annotations
-Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass. 
 
-### Diagnosis
-Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
+### Diagnosis */}
+
+</HighlightedSection>
+
 
 
 ## Key Results
