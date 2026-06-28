@@ -32,6 +32,8 @@ import { Comparison } from "./components/Comparison.tsx";
 
 import teaser from "./assets/Teaser.png"
 import methodDiagram from "./assets/MethodDiagram.png"
+import modelDiagnosis from "./assets/ModelDiagnosis.png"
+import targetedSupplementation from "./assets/TargetedSupplementation.png"
 
 {/* # TOREMOVE: */}
 import outside from "./assets/outside.mp4";
@@ -41,7 +43,7 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 <Header
   title="Diagnosing Aerial-View Detectors using Generative Models"
-  conference="**ECCV 2026**"
+  conference="<b>ECCV 2026</b>"
   authors={[
     {name: "Stanislav Panev", institution: "Carnegie Mellon University", url: "https://spanev.github.io"},
     { name: "Minhyek Jeon", institution: "Carnegie Mellon University", url: "https://www.linkedin.com/in/minhyekjeon"},
@@ -97,10 +99,10 @@ Recent advances in large-scale image generative models enable photorealistic sce
 <Picture src={methodDiagram} alt="Method Diagram" />
 
 ### Taxonomy
-Our pipeline starts from an attribute taxonomy spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color). 
-We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
+Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color). 
 
 ### Image Generation
+We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
 A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
 
 ### Image Editing
@@ -111,6 +113,17 @@ Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash L
 
 ### Diagnosis
 Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
+
+
+## Key Results
+
+### Synthetic diagnostics match real weaknesses
+<Picture src={modelDiagnosis} alt="Model Diagnosis" />
+Across all nine detector–dataset combinations, urban scenes are flagged as problematic every time, industrial in seven, and desert in two — a consistent, model-agnostic failure signature.
+
+### Targeted supplementation works
+<Picture src={targetedSupplementation} alt="Targeted Supplementation" />
+Adding small, scene-specific real datasets (urban, industrial, desert) to the weak categories improves dataset-level AP50 in eight of nine cases, by up to 11.3%, despite the supplements being an order of magnitude smaller than the original training sets.
 
 
 
