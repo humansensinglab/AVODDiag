@@ -103,6 +103,19 @@ Recent advances in large-scale image generative models enable photorealistic sce
 
 
 ## Method
+
+### Taxonomy
+Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
+<Figure>
+  <Picture slot="figure" src={taxonomy} alt="Attribute Taxonomy" />
+  <Fragment slot="caption">
+    Attribute taxonomy tree and associated variables $a_i^{(c)}$ that constitute the attribute vector $\mathbf{a}_i$.
+  </Fragment>
+</Figure>
+
+### Image generation and editing
+We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
+A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
 <Figure>
   <Picture slot="figure" src={methodDiagram} alt="Method Diagram" />
   <Fragment slot="caption">
@@ -112,7 +125,15 @@ Recent advances in large-scale image generative models enable photorealistic sce
   </Fragment>
 </Figure>
 
-### Components
+### Annotations
+Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass.
+
+
+### Diagnosis
+Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
+
+
+{/* ### Components
 <Tabs defaultValue="taxonomy">
   <TabsList>
     <TabsTrigger value="taxonomy">Taxonomy</TabsTrigger>
@@ -148,7 +169,7 @@ Recent advances in large-scale image generative models enable photorealistic sce
   <TabsContent value="diagnosis">
     Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
   </TabsContent>
-</Tabs>
+</Tabs> */}
 
 
 
