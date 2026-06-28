@@ -105,7 +105,7 @@ Recent advances in large-scale image generative models enable photorealistic sce
 ## Method
 
 ### Taxonomy
-Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
+Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (_scene type_, _season_, _weather_) and three object-level axes (_vehicle count_, _type_, _color_).
 <Figure>
   <Picture slot="figure" src={taxonomy} alt="Attribute Taxonomy" />
   <Fragment slot="caption">
@@ -114,8 +114,9 @@ Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three envi
 </Figure>
 
 ### Image generation and editing
-We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
+We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a _text-to-image_ model (_Imagen 3_) synthesizes the scenes. 
 A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
+A second image-editing stage rebalances under-represented attributes via _image-and-text-to-image_ edits.
 <Figure>
   <Picture slot="figure" src={methodDiagram} alt="Method Diagram" />
   <Fragment slot="caption">
@@ -126,79 +127,36 @@ A multimodal LLM re-reads each image to verify attributes, and an embedding-base
 </Figure>
 
 ### Annotations
-Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass.
+Bounding boxes are produced by an ensemble of zero-shot VLMs (_Gemini 2.5 Flash Lite_, _Moondream 2_) and refined with a fast _human-in-the-loop_ pass.
 
 
 ### Diagnosis
 Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
 
 
-{/* ### Components
-<Tabs defaultValue="taxonomy">
-  <TabsList>
-    <TabsTrigger value="taxonomy">Taxonomy</TabsTrigger>
-    <TabsTrigger value="generation">Generation</TabsTrigger>
-    <TabsTrigger value="editing">Editing</TabsTrigger>
-    <TabsTrigger value="annotations">Annotations</TabsTrigger>
-    <TabsTrigger value="diagnosis">Diagnosis</TabsTrigger>
-  </TabsList>
-  
-  <TabsContent value="taxonomy">
-    Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
-    <Figure>
-      <Picture slot="figure" src={taxonomy} alt="Attribute Taxonomy" />
-      <Fragment slot="caption">
-        Attribute taxonomy tree and associated variables $a_i^{(c)}$ that constitute the attribute vector $\mathbf{a}_i$.
-      </Fragment>
-    </Figure>
-  </TabsContent>
-
-  <TabsContent value="generation">
-    We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
-    A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
-  </TabsContent>
-  
-  <TabsContent value="editing">
-    A second image-editing stage rebalances under-represented attributes via image-and-text-to-image edits.
-  </TabsContent>
-  
-  <TabsContent value="annotations">
-    Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass.
-  </TabsContent>
-  
-  <TabsContent value="diagnosis">
-    Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
-  </TabsContent>
-</Tabs> */}
-
-
-
-{/* ### Taxonomy
-Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color). 
-
-### Image Generation
-We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
-A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
-
-### Image Editing
- 
-
-### Annotations
-
-### Diagnosis */}
-
-
-
-
 ## Key Results
 
 ### Synthetic diagnostics match real weaknesses
-<Picture src={modelDiagnosis} alt="Model Diagnosis" />
+<Figure>
+  <Picture slot="figure" src={modelDiagnosis} alt="Model Diagnosis" />
+  <Fragment slot="caption">
+    Scene-wise $\text{AP}^{50}$ of three detectors trained on real aerial datasets (_DOTAv2_, _LINZ_, _UGRC_) and evaluated on the synthetic diagnostic set. Rows denote models; columns denote training datasets. Orange arrows highlight scene types below the overall AP (gray dashed line). Best viewed in color.
+  </Fragment>
+</Figure>
+
 Across all nine detector–dataset combinations, urban scenes are flagged as problematic every time, industrial in seven, and desert in two — a consistent, model-agnostic failure signature.
 
 ### Targeted supplementation works
-<Picture src={targetedSupplementation} alt="Targeted Supplementation" />
+<Figure>
+  <Picture slot="figure" src={targetedSupplementation} alt="Targeted Supplementation" />
+  <Fragment slot="caption">
+    $\text{AP}^{50}$ gains per scene type provided by the data supplementation.
+    The values outlined in the orange box correspond to the scene types for which additional supplement data were used during supplementation.
+  </Fragment>
+</Figure>
+
 Adding small, scene-specific real datasets (urban, industrial, desert) to the weak categories improves dataset-level AP50 in eight of nine cases, by up to 11.3%, despite the supplements being an order of magnitude smaller than the original training sets.
+
 
 
 
