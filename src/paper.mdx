@@ -85,9 +85,13 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 
 ## Abstract
+<Figure>
+  <Picture slot="figure" src={teaser} alt="Overview" />
+  <Fragment slot="caption">
+    We leverage foundation generative models to synthesize diverse, attribute-controlled aerial-view image datasets, thereby enabling systematic diagnosis of the weaknesses of aerial-view vehicle detectors.
+  </Fragment>
+</Figure>
 
-<Picture src={teaser} alt="Overview" />
-{/* We leverage foundation generative models to synthesize diverse, attribute-controlled aerial-view image datasets, thereby enabling systematic diagnosis of the weaknesses of aerial-view vehicle detectors. */}
 Recent advances in large-scale image generative models enable photorealistic scene synthesis with controllable attributes, yet their potential as diagnostic tools for trained vision systems remains unexplored in aerial and remote sensing. We introduce a synthetic diagnostic framework for aerial-view vehicle detection that combines text-guided generation, attribute-controlled editing, and automated attribute verification to build a controllable synthetic testbed. This enables fine-grained evaluation of pretrained detectors across scene types and environmental conditions that are hard to isolate in real datasets. Across three detection architectures and three real aerial datasets, synthetic scene-wise performance trends closely match real-world weaknesses. Guided by these diagnostics, targeted supplementation with small real datasets from the identified weak categories yields improvements of up to 11% AP50 while requiring substantially fewer samples than non-targeted augmentation. The framework is modular and can incorporate alternative generative or vision-language models as capabilities evolve.
 
 
@@ -108,7 +112,7 @@ Recent advances in large-scale image generative models enable photorealistic sce
   </Fragment>
 </Figure>
 
-### Stages
+### Components
 <Tabs defaultValue="taxonomy">
   <TabsList>
     <TabsTrigger value="taxonomy">Taxonomy</TabsTrigger>
@@ -120,7 +124,12 @@ Recent advances in large-scale image generative models enable photorealistic sce
   
   <TabsContent value="taxonomy">
     Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
-    <Picture src={taxonomy} alt="Attribute Taxonomy" />
+    <Figure>
+      <Picture slot="figure" src={taxonomy} alt="Attribute Taxonomy" />
+      <Fragment slot="caption">
+        Attribute taxonomy tree and associated variables $a_i^{(c)}$ that constitute the attribute vector $\mathbf{a}_i$.
+      </Fragment>
+    </Figure>
   </TabsContent>
 
   <TabsContent value="generation">
