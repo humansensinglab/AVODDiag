@@ -35,6 +35,8 @@ import teaser from "./assets/Teaser.png"
 import methodDiagram from "./assets/MethodDiagram.png"
 import modelDiagnosis from "./assets/ModelDiagnosis.png"
 import targetedSupplementation from "./assets/TargetedSupplementation.png"
+import taxonomy from "./assets/AttributeTaxonomy.png"
+
 
 {/* # TOREMOVE: */}
 import outside from "./assets/outside.mp4";
@@ -110,19 +112,25 @@ Recent advances in large-scale image generative models enable photorealistic sce
     <TabsTrigger value="annotations">Annotations</TabsTrigger>
     <TabsTrigger value="diagnosis">Diagnosis</TabsTrigger>
   </TabsList>
+  
   <TabsContent value="taxonomy">
     Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three environmental axes (scene type, season, weather) and three object-level axes (vehicle count, type, color).
+    <Picture src={taxonomy} alt="Attribute Taxonomy" width="640px" />
   </TabsContent>
+
   <TabsContent value="generation">
     We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a text-to-image model (Imagen 3) synthesizes the scenes. 
     A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
   </TabsContent>
+  
   <TabsContent value="editing">
     A second image-editing stage rebalances under-represented attributes via image-and-text-to-image edits.
   </TabsContent>
+  
   <TabsContent value="annotations">
     Bounding boxes are produced by an ensemble of zero-shot VLMs (Gemini 2.5 Flash Lite, Moondream 2) and refined with a fast human-in-the-loop pass.
   </TabsContent>
+  
   <TabsContent value="diagnosis">
     Detectors are then evaluated per attribute value to expose scene-conditioned failure modes.
   </TabsContent>
