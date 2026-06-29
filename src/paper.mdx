@@ -124,14 +124,16 @@ Our pipeline starts from an attribute taxonomy $\mathcal{T}$ spanning three envi
 We uniformly sample attribute tuples, an LLM composes nadir-view generation prompts, and a _text-to-image_ model (_Imagen 3_) synthesizes the scenes. 
 A multimodal LLM re-reads each image to verify attributes, and an embedding-based validation step reconciles predicted attributes with the taxonomy. 
 A second image-editing stage rebalances under-represented attributes via _image-and-text-to-image_ edits.
-<Figure>
-  <Picture slot="figure" src={methodDiagram} alt="Method Diagram" />
-  <Fragment slot="caption">
-    Overview of the synthetic data generation pipeline. 
-    **Left:** Initial image generation using a _text-to-image_ foundation model $f_\text{G}$ conditioned on prompts $p_i^{(\text{G})}$ derived from uniformly sampled attribute values in the taxonomy $\mathcal{T}$. 
-    **Right:** Image editing via _image-and-text-to-image_ generation to correct distributional biases and enrich underrepresented attribute values.
-  </Fragment>
-</Figure>
+<Wide>
+  <Figure>
+    <Picture slot="figure" src={methodDiagram} alt="Method Diagram" />
+    <Fragment slot="caption">
+      Overview of the synthetic data generation pipeline. 
+      **Left:** Initial image generation using a _text-to-image_ foundation model $f_\text{G}$ conditioned on prompts $p_i^{(\text{G})}$ derived from uniformly sampled attribute values in the taxonomy $\mathcal{T}$. 
+      **Right:** Image editing via _image-and-text-to-image_ generation to correct distributional biases and enrich underrepresented attribute values.
+    </Fragment>
+  </Figure>
+</Wide>
 
 ### Annotations
 Bounding boxes are produced by an ensemble of zero-shot VLMs (_Gemini 2.5 Flash Lite_, _Moondream 2_) and refined with a fast _human-in-the-loop_ pass.
