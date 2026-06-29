@@ -168,12 +168,12 @@ Across all nine detector–dataset combinations, urban scenes are flagged as pro
 Adding small, scene-specific real datasets (urban, industrial, desert) to the weak categories improves dataset-level AP50 in eight of nine cases, by up to 11.3%, despite the supplements being an order of magnitude smaller than the original training sets.
 
 
-## Image Editing Examples
+## Attribute-based Image Editing Examples
 
 <TwoColumns>
   <Figure slot="left">
     <Fragment slot="caption">
-      Vehicles presented → No vehicles  
+      Vehicles presence change: Vehicles → No vehicles  
     </Fragment>
     <Comparison client:idle slot="figure">
       <Picture slot="itemOne" src={comp1_vehicle2novehicle_a} alt="Image with vehicles" />
@@ -182,7 +182,7 @@ Adding small, scene-specific real datasets (urban, industrial, desert) to the we
   </Figure>
   <Figure slot="right">
     <Fragment slot="caption">
-      No vehicles → Added Vehicles
+      Vehicles presence change: No vehicles → Vehicles
     </Fragment>
     <Comparison client:idle slot="figure">    
       <Picture slot="itemOne" src={comp2_novehicle2vehicle_a} alt="Image with no vehicles" />
@@ -194,7 +194,7 @@ Adding small, scene-specific real datasets (urban, industrial, desert) to the we
 <TwoColumns>
   <Figure slot="left">
     <Fragment slot="caption">
-      Sunny → Snowy
+      Weather change: Sunny → Snowy
     </Fragment>
     <Comparison client:idle slot="figure">
       <Picture slot="itemOne" src={comp3_sunny2snowy_a} alt="Sunny winter image" />
@@ -203,7 +203,7 @@ Adding small, scene-specific real datasets (urban, industrial, desert) to the we
   </Figure>
   <Figure slot="right">
     <Fragment slot="caption">
-      Fall → Summer
+      Season change: Fall → Summer
     </Fragment>
     <Comparison client:idle slot="figure">
       <Picture slot="itemOne" src={comp4_fall2summer_a} alt="Fall image" />
