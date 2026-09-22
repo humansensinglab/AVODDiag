@@ -35,16 +35,99 @@
 
 We use foundation image generators as diagnostic instruments: synthesize attribute-controlled aerial scenes, find where detectors fail, then fix them with a small, targeted dose of real data.
 
+
+## Overview
+
+AVODDiag is a suite of tools for generating synthetic aerial top-down view image benchmarks for diagnosing vehicle object detectors using commercial or opensource foundational text-to-image generative models, large language models (LLMs), and visual language models (VLMs). 
+
+
+## APIs And Models Supported
+
+- Google GenAI API
+    - Image generation
+        - Imagen 3
+        - Imagen 4
+    
+    - Image editing
+        - Gemini 2.5 Flash Image (Nano Banana)
+        
+    - Attribute extraction and image annotations
+        - Gemini 2.5 Flash
+        - Gemini 2.5 Flash Lite
+
+- OpenAI API
+    - Prompt Composition
+        - GPT-5
+
+
+## Setup
+
+**Create Anaconda Environment**
+
+This project is based on Python 3.11+.
+```bash
+(base) $ conda create -n avoddiag python=3.11
+(base) $ conda activate avoddiag
+```
+
+**Clone Project's GitHub Repository**
+
+Using SSH
+```bash
+(avoddiag) $ git clone git@github.com:humansensinglab/AVODDiag.git
+```
+or using HTTPS
+```bash
+(avoddiag) $ git clone https://github.com/humansensinglab/AVODDiag.git
+```
+
+
+**Install Requirements**
+
+```bash
+(avoddiag) $ cd ./AVODDiag
+(avoddiag) $ pip install -r requirements.txt
+```
+
+
+
+## Config files
+
+The `config` folder contains an example TOML config file `example.toml`. The config files currently hold the following parameters:
+- API keys for the Google and OpenAI providers.
+- Folder and file paths related to the bounding box approval process.
+
+
+## Usage
+
+This package provides seven notebooks related to steps for generating synthetic diagnostic aerial-view image datasets from a pre-defined attribute taxonomy. This is a minimal working example and the workflow is as follows:
+
+1. Use `001_ImageGeneration.ipynb` to generate the primary synthetic dataset based on pre-defined taxonomy attributes.
+1. Use `002_ExtractImageAttributes.ipynb` to extract the taxonomy attributes of the generated images.
+1. Use `003_AnalyzeAttributes.ipynb` to analyze and process the input and the generated attributes of the primary dataset.
+1. Use `004_ImageEditing.ipynb` to edit the primary dataset in order to enrich.
+1. Use `003_AnalyzeAttributes.ipynb` again to analyze and process the generated attributes of the secondary (image editing) dataset.
+1. Use `005_MergeDatasets.ipynb` to merge the primary and secondary datasets.
+1. Use `006_ExtractImageAnnotations.ipynb` to extract automatic annotations for all generated images.
+1. Use `007_ApproveAnnotations.ipynb` to start a web-based application to approve or reject the automatic annotations.
+
+
+
 ## Data
 
 Coming soon
 
 
-## Code
+## BibTeX Citation
 
-Coming coon
-
-
-## Citation
-
-Coming soon
+```bibtex
+@misc{panev2026diagnosingaerialviewobjectdetectors,
+      title={Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models}, 
+      author={Stanislav Panev and Minhyek Jeon and Vaishnavi Khindkar and Ahish Deshpande and Celso M de Melo and Shuowen Hu and Shayok Chakraborty and Fernando De la Torre},
+      year={2026},
+      eprint={2607.02718},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.02718}, 
+}
+```
