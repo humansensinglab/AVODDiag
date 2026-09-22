@@ -1,0 +1,12 @@
+[providers]
+[providers.google]
+api_key = ""
+
+[providers.openai]
+api_key = ""
+
+[bbox_approver]
+image_folder_path = ""
+coco_annotations_path_input = ""
+coco_annotations_path_autosave = ""
+coco_annotations_path_processed = ""
