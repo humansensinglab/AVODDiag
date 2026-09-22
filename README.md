@@ -30,7 +30,12 @@
 ## Table of contents
 
 - [Overview](#overview)
-- [APIs and supported models](#)
+- [APIs and supported models](#apis-and-supported-models)
+- [Setup](#setup)
+- [Config files](#config-files)
+- [Usage](#usage)
+- [Data](#data)
+- [BibTeX Citation](#bibtex-citation)
 
 
 ## Overview
