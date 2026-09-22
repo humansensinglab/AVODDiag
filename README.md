@@ -27,12 +27,18 @@
 </p>
 
 
+## Table of contents
+
+- [Overview](#overview)
+- [APIs and supported models](#)
+
+
 ## Overview
 
 AVODDiag is a suite of tools for generating synthetic aerial top-down view image benchmarks for diagnosing vehicle object detectors using commercial or opensource foundational text-to-image generative models, large language models (LLMs), and visual language models (VLMs). 
 
 
-## APIs And Models Supported
+## APIs and supported models
 
 - Google GenAI API
     - Image generation
