@@ -6,7 +6,7 @@
   <a href="https://spanev.github.io/">Stanislav&nbsp;Panev</a><sup>1</sup>&emsp;
   <a href="https://www.linkedin.com/in/minhyekjeon">Minhyek&nbsp;Jeon</a><sup>1</sup>&emsp;
   <a href="https://vaishnvi.github.io/">Vaishnavi&nbsp;Khindkar</a><sup>1</sup>&emsp;
-  <a href="https://www.linkedin.com/in/ahishd">Ahish&nbsp;Deshpande</a><sup>1</sup>&emsp;
+  <a href="https://www.linkedin.com/in/ahishd">Ahish&nbsp;Deshpande</a><sup>1</sup>&emsp;<br>
   <a href="https://celsodemelo.net/">Celso&nbsp;de&nbsp;Melo</a><sup>2</sup>&emsp;
   <a href="https://www.linkedin.com/in/shuowen-hu-661170149">Shuowen&nbsp;Hu</a><sup>2</sup>&emsp;
   <a href="https://shayokch.com/">Shayok&nbsp;Chakraborty</a><sup>1,3</sup>&emsp;
