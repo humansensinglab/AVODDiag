@@ -1,3 +1,5 @@
+import base64
+
 from google import genai
 from google.genai import types
 from PIL import Image
@@ -80,17 +82,28 @@ class GoogleGenAI:
             if 'generateContent' in model_info.supported_actions:
                 try:
                     t_start = dt.now()
-                    response = self.client.models.generate_content(
+                    # response = self.client.models.generate_content(
+                    #     model=model_name,
+                    #     contents=[prompt],
+                    # )
+                    interaction = self.client.interactions.create(
                         model=model_name,
-                        contents=[prompt],
+                        input=prompt,
+                        response_format={
+                            "type": "image",
+                            "mime_type": "image/jpeg",
+                            "aspect_ratio": "1:1",
+                            "image_size": "1K"
+                        },
                     )
                     t_end = dt.now()
                     elapsed_time = t_end - t_start
 
-                    filtered_parts = list(filter(lambda p: p.inline_data is not None, response.candidates[0].content.parts))
-                    assert len(filtered_parts) == 1, "Only one inline data part is expected."
+                    # filtered_parts = list(filter(lambda p: p.inline_data is not None, response.candidates[0].content.parts))
+                    # assert len(filtered_parts) == 1, "Only one inline data part is expected."
 
-                    pil_image = Image.open(io.BytesIO(filtered_parts[0].inline_data.data))
+                    # pil_image = Image.open(io.BytesIO(filtered_parts[0].inline_data.data))
+                    pil_image = Image.open(io.BytesIO(base64.b64decode(interaction.output_image.data)))
                     success = True
                 
                 except Exception as e:
