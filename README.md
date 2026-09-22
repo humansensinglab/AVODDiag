@@ -31,11 +31,6 @@
 </p>
 
 
-## TL;DR
-
-We use foundation image generators as diagnostic instruments: synthesize attribute-controlled aerial scenes, find where detectors fail, then fix them with a small, targeted dose of real data.
-
-
 ## Overview
 
 AVODDiag is a suite of tools for generating synthetic aerial top-down view image benchmarks for diagnosing vehicle object detectors using commercial or opensource foundational text-to-image generative models, large language models (LLMs), and visual language models (VLMs). 
