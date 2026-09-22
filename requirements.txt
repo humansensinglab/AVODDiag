@@ -1,3 +1,7 @@
+# Build tooling required by older packages such as visdom
+setuptools==80.10.2
+wheel
+
 torch
 torchvision
 transformers>=4.57.0,<5.0.0
