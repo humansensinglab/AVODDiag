@@ -1,5 +1,5 @@
 <h1 align="center">
-  Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models
+  Diagnosing Aerial-View Object Detectors with&nbsp;Foundational Image Generative Models
 </h1>
 
 <p align="center">
