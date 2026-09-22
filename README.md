@@ -1,4 +1,6 @@
-# Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models
+<h1 align="center">
+  Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models
+</h1>
 
 <p align="center">
   <a href="https://spanev.github.io/">Stanislav&nbsp;Panev</a><sup>1</sup>&emsp;
