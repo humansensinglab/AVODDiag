@@ -117,8 +117,9 @@ This package provides seven notebooks related to steps for generating synthetic 
 Coming soon
 
 
-## BibTeX Citation
+## BibTeX Citations
 
+**arXiv**
 ```bibtex
 @misc{panev2026diagnosingaerialviewobjectdetectors,
       title={Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models}, 
