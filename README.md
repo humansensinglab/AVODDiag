@@ -63,23 +63,18 @@ This project is based on Python 3.11+.
 
 **Clone Project's GitHub Repository**
 
-Using SSH
-```bash
-(avoddiag) $ git clone git@github.com:humansensinglab/AVODDiag.git
-```
-or using HTTPS
 ```bash
 (avoddiag) $ git clone https://github.com/humansensinglab/AVODDiag.git
+(avoddiag) $ cd ./AVODDiag
 ```
 
 
 **Install Requirements**
-
 ```bash
-(avoddiag) $ cd ./AVODDiag
-(avoddiag) $ pip install -r requirements.txt
+(avoddiag) $ python -m pip install \
+    --build-constraint build-constraints.txt \
+    -r requirements.txt
 ```
-
 
 
 ## Config files
