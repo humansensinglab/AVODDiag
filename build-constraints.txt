@@ -1,0 +1,3 @@
+# visdom imports pkg_resources during its build.
+# pkg_resources was removed from newer setuptools.
+setuptools==80.10.2
