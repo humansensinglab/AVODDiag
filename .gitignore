@@ -1,3 +1,15 @@
+# Local configuration files that contain sensitive information
+# Ignore everything in config/
+config/*
+# But keep the directory visible
+!config/
+# Unignore the specific file
+!config/example.toml
+
+# Test output folder
+output
+output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
