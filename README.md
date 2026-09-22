@@ -37,7 +37,7 @@
 - [Config files](#config-files)
 - [Usage](#usage)
 - [Data](#data)
-- [BibTeX Citation](#bibtex-citation)
+- [Citations](#bibtex-citations)
 
 
 ## Overview
