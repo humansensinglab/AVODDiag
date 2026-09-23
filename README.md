@@ -49,8 +49,9 @@ AVODDiag is a suite of tools for generating synthetic aerial top-down view image
 
 - Google GenAI API
     - Image generation
-        - Imagen 3
-        - Imagen 4
+        - Imagen 3 *(Deprecated)*
+        - Imagen 4 *(Deprecated)*
+        - Gemini 3.1 Flash Image (Nano Banana 2)
     
     - Image editing
         - Gemini 2.5 Flash Image (Nano Banana)
