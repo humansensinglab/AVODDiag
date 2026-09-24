@@ -6,7 +6,7 @@ api_key = ""
 api_key = ""
 
 [bbox_approver]
-image_folder_path = ""
-coco_annotations_path_input = ""
-coco_annotations_path_autosave = ""
-coco_annotations_path_processed = ""
+image_folder_path = "output/TestDataset_03_Generated+Edited_Images/images"
+coco_annotations_path_input = "output/TestDataset_03_Generated+Edited_Images/annotations_coco/union_gemini-2.5-flash-lite_vikhyatk+moondream2_cars_and_pickup_trucks_original_bboxes.json"
+coco_annotations_path_autosave = "output/TestDataset_03_Generated+Edited_Images/annotations_coco/union_gemini-2.5-flash-lite_vikhyatk+moondream2_cars_and_pickup_trucks_original_bboxes.autosave.json"
+coco_annotations_path_processed = "output/TestDataset_03_Generated+Edited_Images/annotations_coco/union_gemini-2.5-flash-lite_vikhyatk+moondream2_cars_and_pickup_trucks_original_bboxes.processed.json"
