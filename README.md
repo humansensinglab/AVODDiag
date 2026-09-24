@@ -48,7 +48,7 @@ AVODDiag is a suite of tools for generating synthetic aerial top-down view image
 ## APIs and supported models
 
 > [!IMPORTANT]
-> Unfortunately, Google has deprecated all versions of *Imagen* in their API.
+> Unfortunately, Google has deprecated all versions of *Imagen* in their API. Gemini 3x (Nano Banana) models still can be used for image generation and editing.
 
 - Google GenAI API
     - Image generation
