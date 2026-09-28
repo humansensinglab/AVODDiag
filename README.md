@@ -119,6 +119,27 @@ This package provides seven notebooks related to steps for generating synthetic 
 
 ## Data
 
+### Synthetic Diagnostic Data
+
+[**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
+- MD5SUM: 18f646669737ff4a512638107dc54640
+- SHA256SUM: d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2
+
+Folder structure:
+
+```
+Synthetic_Diagnostic.zip/
+├─ annotations_coco/
+│  └─ matched_gemini-2.5-flash-lite_vikhyatk+moondream2_car_square_bboxes.json
+├─ images
+└─ metadata
+```
+
+
+
+
+### Real Supplementary Data
+
 Coming soon
 
 
