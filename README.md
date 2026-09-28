@@ -121,8 +121,7 @@ This package provides seven notebooks related to steps for generating synthetic 
 
 ### Synthetic Diagnostic Data
 
-<a href="https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k" target=_blank>**Synthetic_Diagnostic.zip**</a>
-
+[**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
 - MD5SUM: 18f646669737ff4a512638107dc54640
 - SHA256SUM: d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2
 
