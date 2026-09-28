@@ -188,8 +188,8 @@ def export_filtered_coco(coco: Dict, decisions: Dict[int, str], out_path: Path) 
     
     filtered_anns = [a for a in coco["annotations"] if a["id"] in approved_ids]
     # Keep only images that still have at least one approved annotation (or keep all; choose policy)
-    image_ids_with_anns = {a["image_id"] for a in filtered_anns}
-    filtered_images = [im for im in coco["images"] if im["id"] in image_ids_with_anns]
+    # image_ids_with_anns = {a["image_id"] for a in filtered_anns}
+    # filtered_images = [im for im in coco["images"] if im["id"] in image_ids_with_anns]
     filtered = {
         # "images": filtered_images,
         "images": coco["images"],  # keep all images even if some have no approved boxes (easier to review rejected/undecided later)
