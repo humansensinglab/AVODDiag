@@ -140,10 +140,10 @@ Folder structure:
 
 ```
 Synthetic_Diagnostic.zip/
-├─ annotations_coco/
-│  └─ matched_gemini-2.5-flash-lite_vikhyatk+moondream2_car_square_bboxes.json
-├─ images
-└─ metadata
+ ├─ annotations_coco/
+ │  └─ matched_gemini-2.5-flash-lite_vikhyatk+moondream2_car_square_bboxes.json
+ ├─ images/
+ └─ metadata/
 ```
 
 
