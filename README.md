@@ -119,11 +119,21 @@ This package provides seven notebooks related to steps for generating synthetic 
 
 ## Data
 
+Below we provide image count information about the synthetic diagnostic and the three supplementary real datasets we used in our paper. 
+
+| Dataset Name | Type | Train Split | Test Split | Total |
+| :--- | :---: | :---: | :---: | :---: |
+| Imagen 3 | Synthetic | – | 5,453 | 5,453 |
+| Urban (Miami) | Real | 2,284 | – | 2,284 |
+| Industrial (LA) | Real | 2,000 | – | 2,000 |
+| Desert (Phoenix) | Real | 2,000 | – | 2,000 |
+
 ### Synthetic Diagnostic Data
 
-[**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
-- MD5SUM: 18f646669737ff4a512638107dc54640
-- SHA256SUM: d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2
+#### Imagen 3
+- Download link: [**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
+- MD5: `18f646669737ff4a512638107dc54640`
+- SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
 
 Folder structure:
 
@@ -134,8 +144,6 @@ Synthetic_Diagnostic.zip/
 ├─ images
 └─ metadata
 ```
-
-
 
 
 ### Real Supplementary Data
