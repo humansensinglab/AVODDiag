@@ -132,8 +132,9 @@ Below we provide image count information about the synthetic diagnostic and the 
 
 #### Imagen 3
 - Download link: [**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
-- MD5: `18f646669737ff4a512638107dc54640`
-- SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
+- Checksums:
+  - MD5: `18f646669737ff4a512638107dc54640`
+  - SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
 
 Folder structure:
 
