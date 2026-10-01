@@ -152,8 +152,8 @@ Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/)
 1. Unzip the archive.
 1. Open the provided `.qgz` project file with QGIS.
 1. Open the Python console within QGIS.
-1. Open and run `01_ExportRasterTiles.py` to download and save the raster image tiles in `images` subfolder, which will be automatically created.
-1. Open and run `02_ExportCOCOAnnotations.py` to generate COCO format bounding box annotations for the *"small vehicle"* class as a JSON file. 
+1. Open and run `01_ExportRasterTiles.py` located in `Python` folder to download and save the raster image tiles in `images` subfolder, which will be automatically created.
+1. Open and run `02_ExportCOCOAnnotations.py` located in `Python` folder to generate COCO format bounding box annotations for the *"small vehicle"* class as a JSON file. 
  
 
 #### Urban Environment (Miami, FL, USA)
