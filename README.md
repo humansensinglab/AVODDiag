@@ -131,8 +131,8 @@ Below we provide image count information about the synthetic diagnostic and the 
 ### Synthetic Diagnostic Data
 
 #### Imagen 3
-- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/7bQG_OHQ)
-- SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/tpEHfOfU)
+- **SHA256**: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
 
 Folder structure:
 
@@ -147,21 +147,28 @@ Synthetic-Diagnostic_Imagen3.zip/
 
 ### Real Supplementary Datasets
 
-> [!NOTE]
-> asdf
+Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/) project file and two subfolders—`Layers` and `Python`. To recreate each dataset, complete the steps below in the following order:
+1. Install the QGIS application on your device, if unavailable. We used version 3.44 to produce the project files, but newer should work fine.
+1. Unzip the archive.
+1. Open the `.qgz` project file with QGIS.
+1. Open the Python console within QGIS.
+1. Open and run `01_ExportRasterTiles.py` to download the raster image tiles in `images` subfolder, which will be automatically created.
+1. Open and run `02_ExportCOCOAnnotations.py` to generate COCO format bounding box annotations for the *"small vehicle"* class. 
+ 
 
-#### Urban Environment (Miami)
-- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/TwS1KeyR)
-- SHA256: `ceaaa9251832f4b217b961dd4bfba91355fac24c426e31cd227eed1daa726599`
+#### Urban Environment (Miami, FL, USA)
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/86YIIKqg)
+- **SHA256**: `3c4ba7ee08dcf89fb57d0d9386b955d547df8c82c5c719948865b258fd741d9f`
 - Description: 
 
 
-#### Industrial Environment
+#### Industrial Environment (Los Angeles, CA, USA)
 
-Coming soon
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/u4qK9rxP)
+- **SHA256**: `1b1af7e8745e5f6bd397a66564613cada89003ea05f805f977277e2e24434516`
+- Description: 
 
-
-#### Desert Environment
+#### Desert Environment (Phoenix, AZ, USA)
 
 Coming soon
 
