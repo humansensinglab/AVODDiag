@@ -131,15 +131,13 @@ Below we provide image count information about the synthetic diagnostic and the 
 ### Synthetic Diagnostic Data
 
 #### Imagen 3
-- Download link: [**Synthetic_Diagnostic.zip**](https://datastore.shannon.humansensing.cs.cmu.edu/share/LZrQ_33k)
-- Checksums:
-  - MD5: `18f646669737ff4a512638107dc54640`
-  - SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/7bQG_OHQ)
+- SHA256: `d4ba7002fe5714ebb129a9d4cc528646b93b50a8a94510dbaaca3608e1b4dce2`
 
 Folder structure:
 
 ```
-Synthetic_Diagnostic.zip/
+Synthetic-Diagnostic_Imagen3.zip/
  ├─ annotations_coco/
  │  └─ matched_gemini-2.5-flash-lite_vikhyatk+moondream2_car_square_bboxes.json
  ├─ images/
@@ -147,7 +145,23 @@ Synthetic_Diagnostic.zip/
 ```
 
 
-### Real Supplementary Data
+### Real Supplementary Datasets
+
+> [!NOTE]
+> asdf
+
+#### Urban Environment (Miami)
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/TwS1KeyR)
+- SHA256: `ceaaa9251832f4b217b961dd4bfba91355fac24c426e31cd227eed1daa726599`
+- Description: 
+
+
+#### Industrial Environment
+
+Coming soon
+
+
+#### Desert Environment
 
 Coming soon
 
