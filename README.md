@@ -148,7 +148,7 @@ Synthetic-Diagnostic_Imagen3.zip/
 ### Real Supplementary Datasets
 
 Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/) project file and two subfolders—`Layers` and `Python`. To recreate each dataset, complete the steps below in the following order:
-1. Install the QGIS application on your device, if unavailable. We used version 3.44 to produce the project files, but newer should work fine.
+1. Install the QGIS application on your device, if unavailable. We used version 3.44 to produce the project files, but the newer ones should also work fine.
 1. Unzip the archive.
 1. Open the `.qgz` project file with QGIS.
 1. Open the Python console within QGIS.
@@ -159,14 +159,12 @@ Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/)
 #### Urban Environment (Miami, FL, USA)
 - [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/86YIIKqg)
 - **SHA256**: `3c4ba7ee08dcf89fb57d0d9386b955d547df8c82c5c719948865b258fd741d9f`
-- Description: 
 
 
 #### Industrial Environment (Los Angeles, CA, USA)
 
 - [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/u4qK9rxP)
 - **SHA256**: `1b1af7e8745e5f6bd397a66564613cada89003ea05f805f977277e2e24434516`
-- Description: 
 
 #### Desert Environment (Phoenix, AZ, USA)
 
