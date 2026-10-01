@@ -148,12 +148,12 @@ Synthetic-Diagnostic_Imagen3.zip/
 ### Real Supplementary Datasets
 
 Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/) project file and two subfolders—`Layers` and `Python`. To recreate each dataset, complete the steps below in the following order:
-1. Install the QGIS application on your device, if unavailable. We used version 3.44 to produce the project files, but the newer ones should also work fine.
+1. [Download](https://qgis.org/download/) and install the QGIS application on your device, if unavailable. We used version 3.44 to produce the project files, but the newer ones should also work fine.
 1. Unzip the archive.
-1. Open the `.qgz` project file with QGIS.
+1. Open the provided `.qgz` project file with QGIS.
 1. Open the Python console within QGIS.
-1. Open and run `01_ExportRasterTiles.py` to download the raster image tiles in `images` subfolder, which will be automatically created.
-1. Open and run `02_ExportCOCOAnnotations.py` to generate COCO format bounding box annotations for the *"small vehicle"* class. 
+1. Open and run `01_ExportRasterTiles.py` to download and save the raster image tiles in `images` subfolder, which will be automatically created.
+1. Open and run `02_ExportCOCOAnnotations.py` to generate COCO format bounding box annotations for the *"small vehicle"* class as a JSON file. 
  
 
 #### Urban Environment (Miami, FL, USA)
