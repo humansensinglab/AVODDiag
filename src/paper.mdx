@@ -67,8 +67,8 @@ import comp4_fall2summer_b from "./assets/Comp4b.jpg"
     { name: "Fernando De la Torre", institution: "Carnegie Mellon University", url: "https://www.cs.cmu.edu/~ftorre/"},
   ]}
   links={[
+    { name: "Paper", url: "https://link.springer.com/chapter/10.1007/978-3-032-37152-2_15", icon: "ri:file-pdf-2-line" },
     { name: "arXiv", url: "https://arxiv.org/abs/2607.02718", icon: "academicons:arxiv" },
-    /* { name: "Paper", url: "", icon: "ri:file-pdf-2-line" }, */
     { name: "Code", url: "https://github.com/humansensinglab/AVODDiag", icon: "ri:github-line" },
     { name: "Data", url: "https://github.com/humansensinglab/AVODDiag#data", icon: "ri:database-2-line" },
   ]}
@@ -257,11 +257,29 @@ Coming soon. */}
 ## BibTeX citation
 
 ```bibtex
-@inproceedings{panev2026diagnosing,
-  title={Diagnosing Aerial-View Object Detectors with Foundation Image Generative Models},
-  author={Panev, Stanislav and Jeon, Minhyek and Khindkar, Vaishnavi and Deshpande, Ahish and de Melo, Celso M. and Hu, Shuowen and Chakraborty, Shayok and De la Torre, Fernando},
-  booktitle={European Conference on Computer Vision (ECCV)},
-  year={2026}
+@InProceedings{10.1007/978-3-032-37152-2_15,
+    author="Panev, Stanislav
+    and Jeon, Minhyek
+    and Khindkar, Vaishnavi
+    and Deshpande, Ahish
+    and de Melo, Celso M.
+    and Hu, Shuowen
+    and Chakraborty, Shayok
+    and De la Torre, Fernando",
+    editor="Favaro, Paolo
+    and Kukelova, Zuzana
+    and Maki, Atsuto
+    and Rohrbach, Anna
+    and Schindler, Konrad
+    and Tombari, Federico",
+    title="Diagnosing Aerial-View Object Detectors with Foundational Image Generative Models",
+    booktitle="Computer Vision -- ECCV 2026",
+    year="2026",
+    publisher="Springer Nature Switzerland",
+    address="Cham",
+    pages="260--278",
+    abstract="Recent advances in large-scale image generative models enable photorealistic scene synthesis with controllable attributes. Beyond data augmentation, their potential as diagnostic tools for trained vision systems remains unexplored in the aerial and remote sensing domains. We introduce a synthetic diagnostic framework fors aerial-view vehicle detection that combines text-guided generation, attribute-controlled editing, and automated attribute verification to construct a controllable synthetic testbed. This enables fine-grained evaluation of pretrained detectors under diverse scene types and environmental conditions that are difficult to isolate in real datasets. Across three detection architectures and three real aerial datasets, synthetic scene-wise performance trends closely match real-world weaknesses. Guided by these diagnostics, targeted supplementation with small real datasets from the identified weak categories yields improvements of up to 13{\%} AP50 while requiring substantially fewer additional samples than non-targeted augmentation. Our results show that controlled synthetic probing can predict real-domain performance gaps and guide efficient data collection. The proposed diagnostic framework is modular and can incorporate alternative generative or vision-language models as capabilities evolve. Our code and datasets are available here: humansensinglab.github.io/AVODDiag/.",
+    isbn="978-3-032-37152-2"
 }
 ```
 
