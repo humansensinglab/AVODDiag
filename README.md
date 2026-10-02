@@ -24,8 +24,9 @@
 </p>
 
 <p align="center">
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-37152-2_15"><img src="https://img.shields.io/badge/Publication-0060df" alt="arXiv"></a>
     <a href="https://arxiv.org/abs/2607.02718"><img src="https://img.shields.io/badge/arXiv-2607.02718-b31b1b?logo=arxiv" alt="arXiv"></a>
-    <a href="https://humansensinglab.github.io/AVODDiag/"><img src="https://img.shields.io/badge/-Project%20Page-blue?logo=github" alt="Project Page"></a>
+    <a href="https://humansensinglab.github.io/AVODDiag/"><img src="https://img.shields.io/badge/github.io-Project%20Page-blue?logo=github" alt="Project Page"></a>
 </p>
 
 
