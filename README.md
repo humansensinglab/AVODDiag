@@ -158,18 +158,18 @@ Each real supplementary dataset `.zip` file contains a [QGIS](https://qgis.org/)
  
 
 #### Urban Environment (Miami, FL, USA)
-- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/86YIIKqg)
-- **SHA256**: `3c4ba7ee08dcf89fb57d0d9386b955d547df8c82c5c719948865b258fd741d9f`
-
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/VS46NK-K)
+- **SHA256**: `a267436974a398c2f0eadbf2ddf4331da45f63637bba043d49fa504a734bc3fb`
 
 #### Industrial Environment (Los Angeles, CA, USA)
 
-- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/u4qK9rxP)
-- **SHA256**: `1b1af7e8745e5f6bd397a66564613cada89003ea05f805f977277e2e24434516`
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/htNPrjR0)
+- **SHA256**: `3256c93688cb29a07c404e06233d042177b38bf3d1c4e0c2755ce2fbdfaff8f2`
 
 #### Desert Environment (Phoenix, AZ, USA)
 
-Coming soon
+- [**Download link**](https://datastore.shannon.humansensing.cs.cmu.edu/share/9tgLMPH9)
+- **SHA256**: `d882a311e221176d193269d9e61d6fd7566c9df162e7b65215dd496a2b7c17db`
 
 
 ## BibTeX Citations
